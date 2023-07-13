@@ -1,0 +1,39 @@
+/* діалогове модальне вікно на підтвердження видалення картки*/
+
+.modal-delete-card {
+    display: flex;
+    background-color: white;
+    width: 200px;
+    flex-direction: column;
+    margin-left: -200px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.but-wrap {
+    display: flex;
+}
+
+.no-visit {
+    color: forestgreen;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.edit-card {
+    height: 36px;
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid forestgreen;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    padding-inline: 15px;
+    text-align: right;
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+
+
+

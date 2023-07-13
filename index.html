@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step-Project CARDS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="icon" href="./img/medical_logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+        <header class="header">
+            <div class="wrap">
+                <div class="logo">
+                    <img class="logo-img" src="./img/medical_logo.png" alt="#">
+                    <h1 class="logo-text">медична картка</h1>
+                </div>
+        
+                <button class="header-btn">Вхід</button>
+    
+            </div>
+            
+        </header>
+    
+        <main class="main">
+                       
+        </div>
+            <div class="wrap-search">
+                <label class="search-title" for="search-title"><i class="fa-solid fa-magnifying-glass"></i><input class="input-search"  type="text" placeholder="пошук по заголовку" id="title"></label>
+                <div class="wrap-select">
+                    <select class="select" name="" id="status">
+                        <option value="all">всі</option>
+                        <option value="open">візит очікується</option>
+                        <option value="done">візит відбувся</option>
+                    </select>
+            
+                    <select class="select" name="" id="urgency">
+                        <option value="all">всі</option>
+                        <option value="high">терміново</option>
+                        <option value="normal">звичайний</option>
+                        <option value="low">плановий</option>
+                    </select>
+            
+                    <button class="btn-search">Пошук</button>
+                </div>
+            </div>
+                     
+            <div class="first-vizit">Жодного елемента ще не додано</div>
+            <div class="cards"></div>
+    
+        </main>
+
+
+        <footer class="footer">
+            <h5 class="footer-text">&#169 Медичні картки України, 2023</h5>
+        </footer>
+
+    
+    <script src="./js/modal.js" type="module"></script>
+
+</body>
+</html>
+
+

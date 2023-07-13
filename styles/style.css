@@ -1,0 +1,339 @@
+@import url(../styles/filter.css);
+@import url(../styles/card.css);
+@import url(..//styles/modal.css);
+@import url(../styles/loader.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    font-family: sans-serif;
+    min-height: 100vh;
+    position: relative;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.wrap-visit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);  
+    z-index: 999;
+}
+
+textarea {
+    max-height: 100px;
+}
+
+.header::after {
+    content: "";
+    width: 100%;
+    border-top: 5px solid forestgreen;
+    display: block;
+    margin-top: 10px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    margin-left: 3%;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    text-transform: uppercase;
+    color:forestgreen;
+    margin-top: 20px;    
+}
+
+.header-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    color: wheat;
+    background-color: forestgreen;
+    border: 1px solid forestgreen;
+    margin-inline: 5%;
+    font-weight: 700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.first-vizit {
+    color: forestgreen;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer {
+    flex: 0 0 50px;
+    background-color: forestgreen;
+}
+
+.footer-text {
+    color: wheat;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* ===== adaptive ====== */
+
+@media (max-width: 1100px) {
+    .wrap-search {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 770px) {
+    .input-search {
+        width: 470px;
+    }
+}
+
+@media (max-width: 598px) {
+    .logo-img {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrap-select {
+        flex-direction: column;
+        text-align: center;
+    }
+    .input-search {
+        width: 100%;
+    }
+    .header-btn {
+        width: 100px;
+        height: 30px;
+        border-radius: 30px;
+        font-size: 18px;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 368px) {
+    .logo-text {
+        font-size: 18px;
+    }
+    .logo-img {
+        width: 30px;
+        height: 30px;
+        margin-top: 15px;
+        margin-right: 10px;
+    }
+}
+
+/* ===== Modal window (authorization) ===== */
+
+.modal {
+    width: 500px;
+    height: 300px;
+    background-color: white;
+    color: forestgreen;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    border: 5px solid forestgreen;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+.input-label {
+    display: block;
+    font-size: 18px;
+    margin-top: 50px;
+    text-align: start;
+    margin-left: 10%;
+}
+
+.input-modal.input-email {
+    margin-left: 25px;
+}
+
+.input-modal {
+    width: 250px;
+    height: 30px;
+    border: 2px solid forestgreen;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.btn-modal {
+    height: 36px;
+    position: fixed;
+    top: 240px;
+    right: 30px;
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid forestgreen;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    padding-inline: 15px;
+    cursor: pointer;
+}
+
+.fa-xmark {
+    top: 10px;
+}
+
+.pass-icon {
+    position: absolute;
+    top: 195px;
+    left: 425px;
+    font-size: 16px;
+}
+
+/* ===== ADAPTIVE Modal window (authorization) ===== */
+@media (max-width: 500px) {
+    .modal {
+        width: 100%;
+    }
+    .pass-icon {
+        left: 390px;
+    }
+    .input-label {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 434px) {
+    .modal {
+        font-size: 20px;
+    }
+    .input-label {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+    }
+    .pass-icon {
+        left: 250px;
+    }
+}
+
+.modal-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+    color: brown;
+    font-size: 20px;
+    font-weight: 700;
+    border: 2px solid brown;
+    border-radius: 20px;
+    background-color: white;
+    text-align: center;
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 9999999;
+}
+
+.err-delete {
+    color: brown;
+    left: 90%;
+    z-index: 999999;
+}
+
+/* ===== END Modal window (authorization) ===== */
+
+/* ===== Modal CREATE VISIT ===== */
+
+.modal-newvisit {
+    width: 80%;
+    background-color: white;
+    color: forestgreen;
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 20px;
+    border: 5px solid forestgreen;
+    font-size: 18px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.wrap-select-modalvisit {
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-visit {
+    width: 70%;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid forestgreen;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 7px;
+}
+
+.name-input {
+    margin-inline: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-visit {
+    height: 36px;
+    background-color: forestgreen;
+    color: white;
+    border: 1px solid forestgreen;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 16px;
+    padding-inline: 15px;
+    text-align: right;
+    margin-inline: 20px;
+    cursor: pointer;
+}
+
+.close-visit {
+    background-color: brown;
+    border: 1px solid brown;
+    cursor: pointer;
+}
+
+/* ===== END Modal CREATE VISIT ===== */

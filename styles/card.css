@@ -1,0 +1,138 @@
+/* картка візиту */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    margin: 30px;
+}
+
+.new-card {
+    width: 100%;
+    border: 2px solid forestgreen;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    position: relative;
+}
+
+.card-dentist {
+    background-color: rgb(221, 234, 246);
+    border-radius: 10px;
+}
+
+.card-cardiologist {
+    background-color: rgb(249, 226, 224);
+    border-radius: 10px;
+}
+
+.card-therapist {
+    background-color: rgb(234, 246, 216);
+    border-radius: 10px;
+}
+
+.other-doctor {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.btn-delete-card {
+    position: absolute;
+    top: -10px;
+    left: 90%;
+}
+
+.btn-edit-card {
+    position: absolute;
+    top: -10px;
+    left: 80%;
+}
+
+.btn-maxinfo {
+    position: absolute;
+    top: -10px;
+    left: 70%;
+}
+
+.text-container {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.name-visit {
+    font-style: italic;
+}
+
+/* Розширена картка візиту */
+.new-card {
+    position: relative;
+}
+
+.modal-card {
+    display: flex;
+    background-color: white;
+    width: 300px;
+    flex-direction: column;
+    margin-left: -200px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: -20;
+    left: 0;
+    z-index: 99999999;
+    border: 2px solid wheat;
+    box-shadow: 2px solid forestgreen;
+}
+
+.modal-card p {
+    color: black;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.modal-card span {
+    color: forestgreen;
+    font-style: italic;
+
+}
+
+.close-card {
+    color: wheat;
+    background-color: forestgreen;
+    border-radius: 2px;
+    border: 1px solid wheat;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 700;
+    cursor: pointer;
+}
+
+.modal-cardiologist {
+    background:  rgb(249, 226, 224);
+}
+
+.modal-dentist {
+    background: rgb(221, 234, 246);
+}
+
+.modal-therapist {
+    background-color: rgb(234, 246, 216);
+}
+
+.wrap-infoselect {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid wheat;
+    border-radius: 5px;
+    background: wheat;
+}
+
+.text-edit {
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+}
